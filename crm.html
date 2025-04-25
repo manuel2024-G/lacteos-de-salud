@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM - Clientes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>CRM - Clientes Registrados</h1>
+    <ul id="clientes-lista"></ul>
+  </div>
+
+  <script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const lista = document.getElementById('clientes-lista');
+        if (data.length === 0) {
+          lista.innerHTML = "<li>No hay clientes registrados aún.</li>";
+        } else {
+          data.forEach(cliente => {
+            const li = document.createElement('li');
+            li.textContent = `${cliente.empresa} - ${cliente.contacto} (${cliente.ciudad})`;
+            lista.appendChild(li);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error al cargar los datos:', error);
+        document.getElementById('clientes-lista').innerHTML = "<li>Error al cargar clientes.</li>";
+      });
+  </script>
+</body>
+</html>
