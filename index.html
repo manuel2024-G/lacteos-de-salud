@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Clientes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>Formato de Registro de Clientes</h1>
+    <form id="registroForm">
+      <fieldset>
+        <legend>Tipo de Persona</legend>
+        <label><input type="checkbox" name="tipo" value="juridica" /> Persona Jurídica</label>
+        <label><input type="checkbox" name="tipo" value="natural" /> Persona Natural</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos del Cliente</legend>
+        <label>Nombre de Empresa: <input type="text" name="empresa" required /></label>
+        <label>Dirección: <input type="text" name="direccion" required /></label>
+        <label>Ciudad: <input type="text" name="ciudad" required /></label>
+        <label>Celular: <input type="tel" name="celular" required /></label>
+        <label>Teléfono Fijo: <input type="tel" name="telefono_fijo" /></label>
+        <label>Persona Contacto: <input type="text" name="contacto" required /></label>
+        <label>Cargo: <input type="text" name="cargo" /></label>
+        <label>RIF / Cédula: <input type="text" name="documento" /></label>
+        <label>Persona Auxiliar a Cargo: <input type="text" name="auxiliar" /></label>
+        <label>Teléfono Auxiliar: <input type="tel" name="telefono_aux" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Principales Proveedores</legend>
+        <label>Proveedor 1 - Empresa: <input type="text" name="prov1_nombre" /></label>
+        <label>Producto/Servicio: <input type="text" name="prov1_producto" /></label>
+        <label>Contacto: <input type="text" name="prov1_contacto" /></label>
+        <label>Teléfono: <input type="tel" name="prov1_telefono" /></label>
+
+        <label>Proveedor 2 - Empresa: <input type="text" name="prov2_nombre" /></label>
+        <label>Producto/Servicio: <input type="text" name="prov2_producto" /></label>
+        <label>Contacto: <input type="text" name="prov2_contacto" /></label>
+        <label>Teléfono: <input type="tel" name="prov2_telefono" /></label>
+      </fieldset>
+
+      <button type="submit" class="btn-enviar">ENVIAR</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
