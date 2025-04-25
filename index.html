@@ -10,7 +10,7 @@
   <div class="container">
     <img src="logo.png" alt="Logo" class="logo" />
     <h1>Formato de Registro de Clientes</h1>
-    <form id="registroForm">
+    <form action="https://formspree.io/f/xdkgkeog" method="POST">
       <fieldset>
         <legend>Tipo de Persona</legend>
         <label><input type="checkbox" name="tipo" value="juridica" /> Persona Jurídica</label>
@@ -45,8 +45,8 @@
       </fieldset>
 
       <button type="submit" class="btn-enviar">ENVIAR</button>
+      <input type="hidden" name="_redirect" value="https://lacteos-de-salud-poum.vercel.app/gracias.html" />
     </form>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
